@@ -1,1 +1,6 @@
 <p>uploaded-audio-play works!</p>
+<div>
+  <input type="file" (change)="onFileSelected($event)" accept="audio/*">
+  <button (click)="playAudio()" [disabled]="!audioLoaded">Play Audio</button>
+  <button (click)="stopAudio()" [disabled]="!audioLoaded">Stop Audio</button>
+</div>
